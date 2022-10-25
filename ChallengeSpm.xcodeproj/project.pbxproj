@@ -21,6 +21,8 @@
 		33DB78CF29086EC900054099 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB78CE29086EC900054099 /* FavoritesViewController.swift */; };
 		33DB78D229086F0A00054099 /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB78D129086F0A00054099 /* BooksCollectionViewCell.swift */; };
 		33DB78D429086F2D00054099 /* AuthorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB78D329086F2D00054099 /* AuthorCollectionViewCell.swift */; };
+		33DB78ED290877EC00054099 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 33DB78EC290877EC00054099 /* Apollo */; };
+		33DB78EF290877EC00054099 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 33DB78EE290877EC00054099 /* ApolloAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DB78EF290877EC00054099 /* ApolloAPI in Frameworks */,
+				33DB78ED290877EC00054099 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +178,10 @@
 			dependencies = (
 			);
 			name = ChallengeSpm;
+			packageProductDependencies = (
+				33DB78EC290877EC00054099 /* Apollo */,
+				33DB78EE290877EC00054099 /* ApolloAPI */,
+			);
 			productName = ChallengeSpm;
 			productReference = 33DB789429086D6C00054099 /* ChallengeSpm.app */;
 			productType = "com.apple.product-type.application";
@@ -246,6 +254,9 @@
 				Base,
 			);
 			mainGroup = 33DB788B29086D6C00054099;
+			packageReferences = (
+				33DB78EB290877EC00054099 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 33DB789529086D6C00054099 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -628,6 +639,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33DB78EB290877EC00054099 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33DB78EC290877EC00054099 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33DB78EB290877EC00054099 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		33DB78EE290877EC00054099 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33DB78EB290877EC00054099 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33DB788C29086D6C00054099 /* Project object */;
 }
